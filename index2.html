@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accueil2</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <meta name="robots" content="noindex,nofollow,noarchive,nocache" />
+    <meta name="robots" content="noimageindex" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="index2">
+    <div class="index2-div-container">
+      <div class="hero">
+        <header class="index2-header">
+          <nav class="index2-nav">
+            <h2 class="logo">Portfo<span class="span">lio</span></h2>
+            <ul class="index2-ul">
+              <li class="menu"><a class="a-menu" href="index.html">Acc</a></li>
+              <li class="menu">
+                <a class="a-menu" href="index2.html">Accueil</a>
+              </li>
+              <li class="menu">
+                <a class="a-menu" href="parcours.html">Certifications</a>
+              </li>
+              <li class="menu">
+                <a
+                  id="li-a"
+                  class="nav-link text-decoration-none dropdown-toggle"
+                  href="#"
+                  id="navbarDarkDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Mes Projets
+                </a>
+                <ul id="selected" class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" href="projets.html"
+                      >Tous les projets</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pj_correction.html"
+                      >Maintenance corrective</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pj_evolution.html"
+                      >Maintenance évolutive</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pj_deploiement.html"
+                      >Déploiement de l'application GSB</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="projets.html">Activités</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <a class="index2-btn" href="ressource.html">Ressources</a>
+            <a class="index2-btn" href="ressource.html">Veille technologique</a>
+          </nav>
+        </header>
+      </div>
+
+      <section class="index2-presentation">
+        <div class="index2-content">
+          <h4 class="index2-h4">Salut, je m'appelle</h4>
+          <h1 class="index2-h1">OKOMBI <span class="span">Bienvenu</span></h1>
+          <h3 class="index2-h3">
+            Je suis étudiant en BTS SIO option SLAM au lycée Jean Rostand de
+            Chantilly
+          </h3>
+          <h3>
+            <a
+              href=""
+              style="color: #f9004d; text-decoration: none"
+              class="typewrite"
+              data-period="1000"
+              data-type='[ "#Projets", "#Veille technologique", "#Activités", "#CV", "#Tableau de synthèse", "#Certification..."]'
+            >
+              <span class="wrap"></span>
+            </a>
+          </h3>
+        </div>
+      </section>
+
+      <!--Section A propos -->
+      <section class="about">
+        <div class="index2-main">
+          <img data-tilt src="./images/moiEnNB.png" alt="ma photo" />
+          <div class="about-text">
+            <h2>À propos de ma formation</h2>
+            <h5>BTS SIO option <span class="span">SLAM</span></h5>
+            <p>
+              Ce programme m'a permis de me former sur la cybersécurisation
+              d'une solution applicative et de son développement. Ainsi l'élève
+              participera à la conception, au développement, ainsi qu'au
+              déploiement et à la maintenance des composants logiciels d'une
+              solution applicative.
+            </p>
+            <a
+              class="index2-button"
+              style="text-decoration: none"
+              href="https://www.orientation.com/diplomes/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers"
+              target="_blank"
+              >+ Plus d'infos</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="slide"></section>
+    </div>
+
+    <footer>
+      <p style="text-align: center; font-size: 13px; margin: 50px auto">
+        &copy; OKOMBI Bienvenu Salomon - Parcours de certification
+        professionnelle et portfolio - Chantilly 2023
+      </p>
+    </footer>
+
+    <script>
+      var TxtType = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = "";
+        this.tick();
+        this.isDeleting = false;
+      };
+      console.log("Okombi Bienvenu");
+
+      TxtType.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) {
+          delta /= 2;
+        }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === "") {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+
+        setTimeout(function () {
+          that.tick();
+        }, delta);
+      };
+
+      window.onload = function () {
+        var elements = document.getElementsByClassName("typewrite");
+        for (var i = 0; i < elements.length; i++) {
+          var toRotate = elements[i].getAttribute("data-type");
+          var period = elements[i].getAttribute("data-period");
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+      };
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js">
+  //effet sur les mission
+  //en passant je veux que ça bouge. Je vais utliser vanila tilt avec le site cdnjs trouver dans la chaine "codingjourney"
+</script>
+  </body>
+</html>
