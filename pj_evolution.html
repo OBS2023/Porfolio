@@ -57,13 +57,14 @@
             </li>
           </ul>
           <a class="index2-btn" href="ressource.html">Ressources</a>
-          <a class="index2-btn" href="ressource.html">Veille technologique</a>
+          <a class="index2-btn" href="./Documents/OKOMBI_Veille_technologique.pdf">Veille technologique</a>
         </nav>
       </header>
     </div>
 
     <section class="index2-presentation">
-      <div class="index2-content">
+      <div class="index2-content" id="haut">
+        <a href="#bas" ><button class="btn btn-danger">ᐯ</button></a>
         <h4 class="index2-h4">
           La pratique est la meilleure façon d'apprendre!
         </h4>
@@ -86,7 +87,13 @@
     <section class="projet-about">
       <div class="div-projet-about">
         <div class="presentationMVC" style="background: rgb(54, 53, 53);">
-
+          <h3>COMPETANCES</h3>
+          <ul>
+            <li> - Gérer le patrimoine informatique</li>
+            <li> - Répondre aux incidents et aux demandes d’assistance et d’évolution.</li>
+            <li> - Développer la présence en ligne de l’organisation</li>
+            <li> - Travailler en mode projet</li>
+          </ul>
           <h3>Contexte</h3>
           <p>Le laboratoire Galaxy Swiss Bourdin (GSB) est issu de la fusion en 2009 entre le géant américain Galaxy, spécialisé dans le
             secteur des maladies virales dont le SIDA et les hépatites, et le conglomérat européen Swiss Bourdin.
@@ -108,14 +115,13 @@
           </p>
 
           <h3>Description de la mission</h3>
-          <p>Je suis chargé de réaliser les demandes d’évolutions émanant des utilisateurs de l’application. 
-          </p>
+          <p>Je suis chargé de rajouter une fonctionnalité pour faciliter aux administrateur la suppervision des utilisateurs.  </p>
 
           <h3>Ressources fournies</h3>
-          <p>LLes notes de service exprimant les besoins d’évolutions des utilisateurs.
+          <p>La note de service exprimant le besoins d’évolutions des utilisateurs. 
           </p>
 
-          <a href="./images/gestsup1.png"><img src="./images/gestsup1.png" alt="" ><button class="btn btn-primary">Voir plus</button></a>
+          <a href="./images/NoteDeServiceEvolutionGSB.PNG"><img src="./images/NoteDeServiceEvolutionGSB.PNG" alt="" ><button class="btn btn-primary">Voir plus</button></a>
           
           
           <h3>Contraintes</h3>
@@ -127,108 +133,49 @@
           <a href="./images/maintenanceCorrectif1.png"><img src="./images/maintenanceCorrectif1.png" alt="" ><button class="btn btn-primary">Voir plus</button></a>
           <a href="./images/maintenanceCorrectif2.png"><img src="./images/maintenanceCorrectif2.png" alt="" ><button class="btn btn-primary">Voir plus</button></a>
 
-          <h4>Le versionning (gestion des versions) de l’application mis en place sur bitbucket.</h4>
-          <a href="./images/bitbucket1.PNG"><img src="./images/bitbucket1.PNG" alt="" ><button class="btn btn-primary">Voir plus</button></a>
-          <a href="./images/bitbucket2.PNG"><img src="./images/bitbucket2.PNG" alt="" ><button class="btn btn-primary">Voir plus</button></a>
-
+          
           <h4>compte-rendu des modifications apportées</h4>
-          <p>Comme d'écrit dans le contexte, l'application web GSBfrais a été livrée. Cependant, les bugs font leur apparution. <br>
-            Ainsi, le nombre de nuitée correspond au nombre de nuit par mois que le visiteur médical a passé dans une ville. <br>
-            Concretement, elle doit etre inférieur aux 30 jours du mois. <br><br>
-            
-            D'apres le ticket incident, l'utilisateur parvient à entrer un nombre de nuitée supérieur au nombre de jour du mois. <br>
-
-            pour resoudre le problème, j'ai intervenu uniquement dans  le controleur : <b>FraisforfaitContoleur</b>.
-            Le probleme se pose lors de la saisie de frais forfaitisés. Il existe dans le controleur FraisforfaitContoleur <br>
-            une méthode plus qui se charge de la saisie du nombre de nuitée hotel, cette methode fait appelle à une autre méthode privée<br>
-            du même controleur appelé verifierQteFraisForfait qui prend deux paramettre à l'entrée et se charge de la vérification <br>
-            des données renseignés. Ainsi, pour remedier au probleme, il m'a suffit de rajouter une condition dans la méthode verifierQteFraisForfait <br>
-            qui limitera le nombre de nuitée entré. <br><br>
-
-            Etape 1 : J'ai parcouru à l'aide d'une boucle foreach le tableau les frais, afin de réccuperer la clé : $code et la valeur : $quantite. <br><br>
-            Etape 2 : J'ai eu reccourt à la fonction ctype_digit qui Vérifie qu'une chaîne est un entier.  <br><br>
-            Etape 3 : Ensuite à l'aide de la fonction date de php j'émets une condition qui dit : Si la clé ($code) est égale à "NUI" et que la valeur($quantite) 
-            est supérieur à date(t), que le programme affiche une erreur.
+          <p>Ma mission consiste à rajouter une fonctionnalité permettant 
+            aux profils administrateur de gérer l'ajout, la suppression, la consultation et la modification d'utilisateurs.
+            <br><br>
           </p>
-
-          <p style="font-size: 20px; font-weight: bold; color: #f9004d; margin: 20px;">Avant</p>
+          <h5>Dans le modele :</h5>
+          <p>Au niveau du model, j'ai rajouter dans la classe UtilisateurManager les méthodes publics : <br>
+          </p>
+            <ul>
+              <li>GetLesUtilisateurs</li>
+              <li>GetUtilisateur</li>
+              <li>AjouteUtilisateur</li>
+              <li>ModifierUtilisateur</li>
+              <li>SupprimerUtlisateur</li>
+            </ul><br> 
+            
+          <!--<p style="font-size: 20px; font-weight: bold; color: #f9004d; margin: 20px;">Avant</p>
           <a href="./images/maintenanceCorrectif2.png"><img src="./images/maintenanceCorrectif2.png" alt="" ><button class="btn btn-primary">Voir plus</button></a>
           <p style="font-size: 20px; font-weight: bold; color: #f9004d; margin: 20px;">Après</p>
-          <a href="./images/maintenanceCorrective3.jpg"><img src="./images/maintenanceCorrective3.jpg" alt="" ><button class="btn btn-primary">Voir plus</button></a>
+          <a href="./images/maintenanceCorrective3.jpg"><img src="./images/maintenanceCorrective3.jpg" alt="" ><button class="btn btn-primary">Voir plus</button></a>-->
+
+          <a href="./images/gsbFraisModelgetUserETajoutUser.PNG"><img src="./images/gsbFraisModelgetUserETajoutUser.PNG" alt="" ><button class="btn btn-primary">Voir plus</button></a>
+          <a href="./images/gsbFraisModelSuprimerModif.PNG"><img src="./images/gsbFraisModelSuprimerModif.PNG" alt="" ><button class="btn btn-primary">Voir plus</button></a>
+          <a href="./images/GSBfraisAjoututilisateur.PNG"><img src="./images/GSBfraisAjoututilisateur.PNG" alt="" ><button class="btn btn-primary">Voir plus</button></a>
+          <a href="./images/GSBfraisConsultation.PNG"><img src="./images/GSBfraisConsultation.PNG" alt="" ><button class="btn btn-primary">Voir plus</button></a>
+
         </div>
       </div>
 
+      
     </section>
+
+    <!-- Bouton pour remonter-->
+    <a href="#haut" id="bas" style="margin : 100px;"><button class="btn btn-danger">^</button></a>
   </div>
 
   <footer>
-    <p style="text-align: center; font-size: 13px; margin: 50px auto">
-      &copy; Lorem Lor - Parcours de certification
-      professionnelle et portfolio - ... 2023
+    <p style="margin-top: 100px;">
+      &copy; OKOMBI Bienvenu Salomon - Parcours de certification
+      professionnelle et portfolio - Chantilly 2023
     </p>
   </footer>
-
-  <script>
-    var TxtType = function (el, toRotate, period) {
-      this.toRotate = toRotate;
-      this.el = el;
-      this.loopNum = 0;
-      this.period = parseInt(period, 10) || 2000;
-      this.txt = "";
-      this.tick();
-      this.isDeleting = false;
-    };
-    console.log("Okombi Bienvenu");
-
-    TxtType.prototype.tick = function () {
-      var i = this.loopNum % this.toRotate.length;
-      var fullTxt = this.toRotate[i];
-
-      if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-      } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-      }
-
-      this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-      var that = this;
-      var delta = 200 - Math.random() * 100;
-
-      if (this.isDeleting) {
-        delta /= 2;
-      }
-
-      if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === "") {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-      }
-
-      setTimeout(function () {
-        that.tick();
-      }, delta);
-    };
-
-    window.onload = function () {
-      var elements = document.getElementsByClassName("typewrite");
-      for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute("data-type");
-        var period = elements[i].getAttribute("data-period");
-        if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
-      }
-      // INJECT CSS
-      var css = document.createElement("style");
-      css.type = "text/css";
-      css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-      document.body.appendChild(css);
-    };
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js">
       //effet sur les mission

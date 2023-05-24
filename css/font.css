@@ -146,7 +146,7 @@
     background-attachment: fixed;
 }
 .index2-div-container{
-    background-image:linear-gradient(to right, rgba(10, 10, 10, 0.966), rgba(10, 9, 10, 0.786)), url('../images/moiEndesessin.jpg');
+    /*background-image:linear-gradient(to right, rgba(10, 10, 10, 0.966), rgba(10, 9, 10, 0.786)), url('../images/moiEndesessin.jpg');*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -472,5 +472,8 @@ footer p{
     text-align: center;
 }
 
- 
+.ressource-a{
+    display: inline-block;
+    margin: 40px;
+}
 
